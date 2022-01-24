@@ -12,7 +12,7 @@ translate chinese strings:
 
     # renpy/common/00accessibility.rpy:30
     old "Self-voicing enabled. "
-    new ""
+    new "自动发声已启用。"
 
     # renpy/common/00accessibility.rpy:32
     old "bar"
