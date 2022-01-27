@@ -1,9 +1,18 @@
 translate chinese python:
-    gui.default_font = "gui/font/wrht.ttf"
-    gui.name_font = "gui/font/fzht.ttf"
-    gui.interface_font = "gui/font/wrht.ttf"
-    gui.choice_button_text_font = gui.default_font
-    gui.button_text_font = gui.interface_font
+    style.default.font = "gui/font/fzht.ttf"
+    ## The font used for in-game text.           #遊戲內字形
+define gui.text_font = "gui/font/fzht.ttf"
+
+## The font used for character names.        #角色名字形
+define gui.name_text_font = "gui/font/fzht.ttf"
+
+## The font used for out-of-game text.       #選單字形?
+define gui.interface_text_font = "gui/font/fzht.ttf"
+
+
+
+
+
 translate chinese style edited:
     font "gui/font/wrht.ttf"
 translate chinese style poemgame_text:
