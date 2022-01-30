@@ -32,17 +32,24 @@
 
 ![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/renpy_2022-01-28_00-24-49.png)
 
-2.2.5 选择tl(翻译)文件，如图所示
-
-![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/renpy_2022-01-28_00-25-31.png)
 
 ####  2.2.5 点击chinese(教程自带多语言支持，一般游戏是没做的)，如图所示
+
+<<<<<<< HEAD
 
 ![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/renpy_2022-01-28_00-26-22.png)
 
 #### 2.2.6 点击有rpy后缀文件(如果汉化他人的游戏是没有rpy后缀，只有rpyc，如果想汉化他人游戏的教程请看 [3](#3))->右键->选择打开方式->以记事本的形式打开，如图所示
 
 ![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/renpy_2022-01-28_00-27-06.png)
+
+
+=======
+
+![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/renpy_2022-01-28_00-26-22.png)
+
+
+
 
 
 
