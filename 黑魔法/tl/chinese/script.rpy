@@ -10,7 +10,7 @@ translate chinese consume_item_16f269e8:
 translate chinese consume_item_27b03296:
 
     # "I've been drinking too much water!"
-    "我一直在喝水太多了！"
+    "我喝了太多水了！"
 
 # game/script.rpy:467
 translate chinese should_corrupt_her_more_thinking_b89d528d:
