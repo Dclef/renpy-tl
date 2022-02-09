@@ -70,7 +70,7 @@
 
 ![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/renpy_2022-01-30_21-41-56.png)
 
-### 3.2 返回到初始界面，运行一次游戏，运行成功有游戏界面以后，关闭游戏，并删掉un.rpyc文件，如图所示。
+### 3.2 返回到初始界面(是指带有exe的游戏目录界面)，运行一次游戏，运行成功有游戏界面以后，关闭游戏，并删掉un.rpyc文件，如图所示。
 
 ![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/renpy_2022-01-30_22-18-15.png)
 
@@ -105,7 +105,15 @@ translate chinese python:
 
 ```
 
-### 3.6 以上的步骤完成以后理论上便可以汉化大部分的游戏文本，如果汉化的文本出现口口字，请查看[Q&A](#q&a)
+### 3.6 请运行游戏，找到设置中的Language，选择Chinese。如图所示
+
+### 注意：教程中的多语言支持自带有简体中文，不要搞混淆了。
+
+![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/Snipaste_2022-02-09_21-56-17.png)
+
+
+
+### 3.7 以上的步骤完成以后理论上便可以汉化大部分的游戏文本，如果汉化的文本出现口口字，请查看[Q&A](#q&a)
 
 
 
