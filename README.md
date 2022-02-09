@@ -70,11 +70,9 @@
 
 ![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/renpy_2022-01-30_21-41-56.png)
 
-### 3.2 返回到初始界面(是指带有exe的游戏目录界面)，运行一次游戏，运行成功有游戏界面以后，关闭游戏，并删掉un.rpyc文件，如图所示。
+### 3.2 返回到初始界面(是指带有exe的游戏目录界面)，运行一次游戏，运行成功并显示游戏界面以后，请关闭游戏，并删掉un.rpyc文件，你会发现多出来了后缀为rpy的文件，这类文件是可以打开的，如图所示。
 
 ![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/renpy_2022-01-30_22-18-15.png)
-
-你会发现多出来了后缀为rpy的文件，这类文件是可以打开的。
 
 ### 3.3 在game目录中放入SourceHanSansLite.ttf字体(此字体renpy sdk自带,在launcher\game\fonts 路径中)，打开**screens.rpy**文件，在其中搜索 preferences() ，如果你使用的是记事本的格式打开，请使用ctrl+F ，如图所示
 
