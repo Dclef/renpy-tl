@@ -153,13 +153,31 @@ translate chinese python:
 
 ### 4.6 翻译插件默认是google翻译，如果想换成baidu翻译，如图所示。
 
+### 此插件需要划词选中鼠标在其上面要停顿几秒(大概3s以内)，否则不容易显示。且必须将vscode中的python插件卸载(vscode会在打开rpy文件时在右下角推荐安装python扩展，请不要点)，否则不会显示翻译。
+
 ![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/renpy_2022-01-30_23-15-22.png)
 
 ![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/renpy_2022-01-30_23-20-11.png)
 
 
 
-**注意：翻译的API的划词数可能是有限制，如果出现网络错误请更换翻译api。**
+**注意：翻译的API的字数是有限制，如果出现网络错误请随时更换翻译api。**
+
+
+
+### 4.7 如果悬停翻译不显示，那么请手动在插件中更换成BaiduApi，请打开Comment Translate插件扩展设置，如图所示
+
+![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/2022-02-11_21-24-57.png)
+
+
+
+![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/2022-02-11_21-25-10.png)
+
+### 4.8 请勾选开启悬停翻译字符串和变量，以及将默认的Google改为Baidu，如图所示。你可以更换三种API (Google,Baidu,Bing)，注意首字母大写。
+
+![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/2022-02-11_21-25-36.png)
+
+
 
 
 
@@ -203,9 +221,23 @@ archive.rpa 指的是你要反编译的文件。
 
 ### 5.4 有时候打开renpy.exe会报错，该如何解决？
 
-请删除renpy.exe目录下的game 文件。
+请删除renpy.exe目录下的game 文件。、
 
-### 5.5 请在github中提交[issues](https://github.com/Dclef/renpy-tl/issues)，问题会根据issues中的问题持续更新...............
+### 5.5  在翻译的时候会出现超时的情况，该如何解决？
+
+如果出现这类情况，说明你翻译的速度太快，目前最好的方法就是配置Baidu的通用翻译(免费)，
+
+你需要打开[百度翻译平台](http://api.fanyi.baidu.com/manage/developer)，将APP ID和密钥配置到Comment Translate，如图所示
+
+![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/2022-02-11_21-25-54.png)
+
+![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/2022-02-11_22-02-48.png)
+
+注意：你需要申请[通用翻译服务](http://api.fanyi.baidu.com/product/11)，否则不会有上图方框中显示的信息并且调用API时会报错，如图所示
+
+![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/2022-02-11_22-03-15.png)
+
+### 5.6 请在github中提交[issues](https://github.com/Dclef/renpy-tl/issues)，问题会根据issues中的问题或其他平台反馈的问题持续更新...............
 
 
 
