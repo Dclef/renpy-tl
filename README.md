@@ -9,6 +9,7 @@
 1. [python 3.7以上](https://www.python.org/)版本环境
 2. [unrpyc](https://github.com/CensoredUsername/unrpyc/releases/tag/v1.1.7)文件 (用于反编译rpyc文件)
 3. unrpa文件 【安装完python以后以及配置好环境变量(Path路径)请使用 **pip install unrpa** 安装unrpa包】(用于反编译rpa文件)
+3. 以上3点可用[unren](https://dclef.lanzouj.com/iaveH00ukc1e)工具(以汉化)一次性解决，直接放入游戏根目录根据提示执行即可(但有些游戏会提示无法找到python.exe，所以我还是推荐使用老方法，老方法能解决99%的游戏)
 4. [ren'py sdk](https://www.renpy.org/latest.html) (本人使用的是renpy-7.4.11版本)  
 5. 汉化包所描述的游戏
 
