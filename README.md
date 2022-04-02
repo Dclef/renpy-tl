@@ -9,7 +9,7 @@
 1. [python 3.7以上](https://www.python.org/)版本环境
 2. [unrpyc](https://github.com/CensoredUsername/unrpyc/releases/tag/v1.1.7)文件 (用于反编译rpyc文件)
 3. unrpa文件 【安装完python以后以及配置好环境变量(Path路径)请使用 **pip install unrpa** 安装unrpa包】(用于反编译rpa文件)
-3. 以上3点可用[unren](https://dclef.lanzouj.com/iaveH00ukc1e)工具(以汉化)一次性解决，直接放入游戏根目录根据提示执行即可(但有些游戏会提示无法找到python.exe，所以我还是推荐使用老方法，老方法能解决99%的游戏，剩下1%是做了另外的加密)
+3. 以上3点可用[unren](https://dclef.lanzouj.com/iaveH00ukc1e)工具一次性解决(以汉化，如果打开闪退请使用[封装版](https://dclef.lanzouj.com/icHaM02i8ebe))，直接放入游戏根目录根据提示执行即可(但有些游戏会提示无法找到python.exe，所以我还是推荐使用老方法，老方法能解决99%的游戏，剩下1%是做了另外的加密)
 4. [ren'py sdk](https://www.renpy.org/latest.html) (本人使用的是renpy-7.4.11版本)  
 5. 汉化包所描述的游戏
 
@@ -184,11 +184,11 @@ translate chinese python:
 
 对你没看错，确实能进行翻译，用excel翻译的原理来源于贴吧 (原帖已被删除)，本人进行了一定量的简化。
 
-**下载表格汉化文件压缩包，[请点击这里](https://dclef.lanzouj.com/ihhks02i6u2j)。**
+**下载表格汉化文件压缩包，[请点击这里](https://dclef.lanzouj.com/ifHIc02i92he)。**
 
 ## 以下思路只提供参考，上面文件已经集成了，不需要你去实现操作。
 
-###   5.1拿到原版游戏，进行unrpa和unrpyc解包和反编译， 用“Renpy解包助手汉化版.exe”软件解包，看到文件里有大量.rpy文件就完成了
+###   5.1拿到原版游戏，进行unrpa和unrpyc解包和反编译， 用“Renpy解包助手汉化版.exe”软件或UnRen解包，看到文件里有大量.rpy文件就完成了
 
 ###  5.2用官方Ren'Py软件生成翻译文件，导出后在game目录下面就出现tl文件夹，文件夹chiese目录和下有很多.rpy和.rpyc文件，用记事本打开会发现很多垃圾注释。
 
@@ -249,6 +249,14 @@ archive.rpa 指的是你要反编译的文件。
 ```
 链接: https://pan.baidu.com/s/1sCOcXudmkPjDAWMuy0n2Ag?pwd=tifz 提取码: tifz 
 ```
+
+### 如果百度网盘慢的话请使用蓝奏云
+
+```
+https://dclef.lanzouj.com/iMJPs02i8o6j
+```
+
+
 
 ## 6.3 翻译后的文本出现口口(方块)字，该怎么办？
 
