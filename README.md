@@ -282,7 +282,41 @@ https://dclef.lanzouj.com/iMJPs02i8o6j
 
 ![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/2022-02-11_22-03-15.png)
 
-## 6.6 请在github中提交[issues](https://github.com/Dclef/renpy-tl/issues)，问题会根据issues中的问题或其他平台反馈的问题持续更新...............
+## 6.6 我想替换图标(如PC和安卓)该如何替换？
+
+安卓你只要准备两张png图片，大小为432*432像素。
+
+命名为android-icon_background.png和android-icon_foreground.png并放在游戏根目录即可。如果想下载案例请[点我](https://dclef.lanzouj.com/iuT9F02r89li)。
+
+如果你想替换启动图，设置一张android-presplash.jpg，大小为500*500像素并放在游戏根目录即可。
+
+为什么是要设置为432像素？因为这是新版安卓的自适应图标标准大小。
+
+可看renpy的[官方文档](https://www.renpy.cn/doc/android.html#presplash)，有详细解释。
+
+PC端你只需要设置一张为icon.ico的图标，大小为128*128像素并放在游戏根目录即可。详情请看下图。
+
+![](https://cdn.jsdelivr.net/gh/Dclef/CDN@master/renpy/2022-04-07_09-46-34.png)
+
+##### 以上均要重新再次封包才能生成。
+
+#### 如果你要设置PC端桌面的图标，如下图
+
+![](https://cdn.jsdelivr.net/gh/Dclef/CDN@master/renpy/2022-04-07_16-33-59.png)
+
+你只需要准备一张250*250像素的图片，并在options.rpy中设置一行代码。如图所示
+
+![](https://cdn.jsdelivr.net/gh/Dclef/CDN@master/renpy/2022-04-07_09-46-13.png)
+
+上图所示图标路径如图所示
+
+![](https://cdn.jsdelivr.net/gh/Dclef/CDN@master/renpy/2022-04-07_09-45-32.png)
+
+关于如何去修改像素大小和生成图标，这里我建议使用ps要或者在线ps
+
+##### 在线ps我推荐使用[photopea](https://www.photopea.com/)
+
+## 6.7 请在github中提交[issues](https://github.com/Dclef/renpy-tl/issues)，问题会根据issues中的问题或其他平台反馈的问题持续更新...............
 
 
 
