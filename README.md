@@ -1,3 +1,5 @@
+
+
 # 1.创建的初衷
 
 现如今以是末法时代(指众多汉化组在11月前后消失事件)，虽然觉得被抓是应该的(指冷狐)，但是为爱发电的(指脸肿)也被喝茶解散以后，那么汉化组是否存在意义已经不大了，所以在人人自危的环境下，个人汉化似乎成为了唯一且安全的趋势，但一个人的所贡献的力量太小，于是乎想到了开源。
@@ -9,7 +11,7 @@
 1. [python 3.7以上](https://www.python.org/)版本环境
 2. [unrpyc](https://github.com/CensoredUsername/unrpyc/releases/tag/v1.1.7)文件 (用于反编译rpyc文件)
 3. unrpa文件 【安装完python以后以及配置好环境变量(Path路径)请使用 **pip install unrpa** 安装unrpa包】(用于反编译rpa文件)
-3. 以上3点可用[unren](https://dclef.lanzouj.com/iaveH00ukc1e)工具一次性解决(以汉化，如果打开闪退请使用[封装版](https://dclef.lanzouj.com/icHaM02i8ebe))，直接放入游戏根目录根据提示执行即可(但有些游戏会提示无法找到python.exe，所以我还是推荐使用老方法，老方法能解决99%的游戏，剩下1%是做了另外的加密)
+3. 以上3点可用[unren](https://dclef.lanzouj.com/iaveH00ukc1e)工具一次性解决(以汉化，如果打开闪退请使用[封装版](https://dclef.lanzouj.com/icHaM02i8ebe))，直接放入游戏根目录根据提示执行即可【目前unren不适用于一些作者进行简单加密的游戏，建议使用unrpyc+unrpa】
 4. [ren'py sdk](https://www.renpy.org/latest.html) (本人使用的是renpy-7.4.11版本)  
 5. 汉化包所描述的游戏
 
@@ -92,7 +94,7 @@
 
 ```
 
-## 3.5 请重复[2.2](#2.1)步骤，完成以后请在tl目录下新建一个style.rpy文件，如图所示
+## 3.5 请重复[2.2](#2.1)步骤，完成以后请在tl目录下新建一个style.rpy文件，如图所示【如果你直接更换了字体，此步骤可以跳过】
 
 ![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/renpy_2022-01-30_22-48-29.png)
 
@@ -180,11 +182,11 @@ translate chinese python:
 
 
 
-# 5.使用excel进行翻译
+# 5.使用excel进行翻译(以更新视频)
 
 对你没看错，确实能进行翻译，用excel翻译的原理来源于贴吧 (原帖已被删除)，本人进行了一定量的简化。
 
-**下载表格汉化文件压缩包，[请点击这里](https://dclef.lanzouj.com/ifHIc02i92he)。**
+##### 下载表格汉化文件压缩包以及教程视频的，[请点击这里](https://dclef.lanzouj.com/inxOS03ha69g)
 
 ## 以下思路只提供参考，上面文件已经集成了，不需要你去实现操作。
 
@@ -218,9 +220,90 @@ translate chinese python:
 
 ### 使用精简版的时候，留意里面的黄字部分即可。
 
-# 6. <span id="q&a">Q&A</span>【常见问题】
+# 6.使用Translator++进行翻译
 
-## 6<span id="6.1">.1 我想查看里面的CG和视频，但找不到如何解决？</span>
+##### 注意：此方法不需要生成chinese文件 
+
+使用t++方法很简单，你只需要下载[t++](https://pan.baidu.com/s/1VDu1LBDqYAFXfBIpn-kCDQ?pwd=pay2)，打开工程翻译即可。
+
+```
+https://pan.baidu.com/s/1VDu1LBDqYAFXfBIpn-kCDQ?pwd=pay2
+解压密码：Dreamsavior
+```
+
+### 6.1打开一个新工程 如图所示
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_19-57-40.png)
+
+### 6.2 选择要翻译的类型，如图所示
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_19-57-49.png)
+
+### 6.3 选择你游戏目录的exe文件，如图所示
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_19-58-08.png)
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_21-30-43.png)
+
+#### 注意：有rpa文件的建议先解包，然后将rpa文件删除不然容易出现下面这种情况，如图
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_19-58-31.png)
+
+#### 打开完以后你会出现以下界面
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_20-57-27.png)
+
+##### 这时候就体现了t++的缺点，他将renpy里面的代码也给提取出来了，请不要去翻译。同时也要注意在game目录下的一些文本也不能去翻译，如图
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_21-37-53.png)
+
+##### 这里很明显看出这是一个icon目录下的png文件，他也给提取出来翻译了，请不要翻译。
+
+### 6.4 选中文件，右键选中批量翻译，如图所示
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_20-57-40.png)
+
+##### 你可以更换翻译引擎，这里推荐google或者baidu
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_21-45-56.png)
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_21-41-09.png)
+
+### 6.5 导出并覆盖到原文本（建议备份），如图所示
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_20-59-29.png)
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_20-59-46.png)
+
+##### 这样你就成功翻译了该游戏，是不是很简单，之前国内大部分汉化组就是依靠着t++进行翻译（我称之为机翻汉化组），虽然简单但缺点也很明显，文本直接覆盖了，导致没有英文原版，所以下面讲的如何用脚本进行翻译。（t++的润色系统做的还行，如果机翻完了有时间可以去润色，他分为三种润色，机器翻译，较好的翻译和最好的翻译，实际上三种就是让你做对比，导出时他会根据你是否润色过选择权重最高的翻译，如果你啥都没有润色，就选取inital下的翻译）
+
+# 7.使用脚本(调用百度API)进行翻译
+
+##### 这里感谢katharsis提供的脚本，代码由本人简单修改上传在github中，有兴趣的可以去看一下，这里给个开箱即用的。
+
+```
+https://dclef.lanzouj.com/iwG9n044fdbi
+```
+
+##### 使用方法也很简单，先去百度拿到api，详情可看**8.5**。
+
+##### 然后生成chinese文件，详情可看2.2.2
+
+### 7.1 输入你的appid和密钥，输入要翻译的路径，以及源语言和要翻译的语言，替换路径选择填n 如图所示
+
+### ![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_22-17-41.png)
+
+### 7.2 翻译完成你会生成new文件，如图所示
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_22-18-31.png)
+
+##### 翻译替换即可，也非常方便。
+
+### 请注意：任何翻译软件都会有漏翻或翻译报错打不开的现象(包括以上两种方法)，如果用机翻软件报错请自行查看问题所在。
+
+# 8. <span id="q&a">Q&A</span>【常见问题】
+
+## 8<span id="8.1">.1 我想查看里面的CG和视频，但找不到如何解决？</span>
 
 请完成[2.1](#2.1)步骤中的1和3，使用unrpa解决。
 
@@ -242,7 +325,7 @@ archive.rpa 指的是你要反编译的文件。
 
 如果发现 **No module named unrpa** ，请在cmd命令行中输入**pip install unrpa**
 
-## 6.2 unrpyc文件我下载不了(不会下载)？
+## 8.2 unrpyc文件我下载不了(不会下载)？
 
 ### 以放入百度网盘
 
@@ -253,22 +336,23 @@ archive.rpa 指的是你要反编译的文件。
 ### 如果百度网盘慢的话请使用蓝奏云
 
 ```
-https://dclef.lanzouj.com/iMJPs02i8o6j
+https://dclef.lanzouj.com/b0bap2qbg
+密码:bvd8
 ```
 
 
 
-## 6.3 翻译后的文本出现口口(方块)字，该怎么办？
+## 8.3 翻译后的文本出现口口(方块)字，该怎么办？
 
 每个游戏作者都有不同写法，这里使用通杀的方式解决(不代表全部有效)
 
-将**SourceHanSansLite.ttf**字体放入game目录中，在game目录中找到gui.rpy文件，如果没有请重复[5.1](#5.1)步骤。**找到所有带.otf或.ttf后缀的代码**，请全部替换成**SourceHanSansLite.ttf**。
+将**SourceHanSansLite.ttf**字体放入game目录中，在game目录中找到gui.rpy文件，如果没有请重复[5.1](#5.1)步骤。**或者用vscode进行全文检索找到所有带.otf或.ttf后缀的代码**，请全部替换成**SourceHanSansLite.ttf**。
 
-## 6.4 有时候打开renpy.exe会报错，该如何解决？
+## 8.4 有时候打开renpy.exe会报错，该如何解决？
 
 **请删除renpy.exe目录下的game 文件。、**
 
-## 6.5  在vscode使用翻译插件的时候会出现超时的情况，该如何解决？
+## 8.5  在vscode使用翻译插件的时候会出现超时的情况，该如何解决？
 
 如果出现这类情况，说明你翻译的速度太快，目前最好的方法就是配置Baidu的通用翻译(免费)，
 
@@ -282,7 +366,9 @@ https://dclef.lanzouj.com/iMJPs02i8o6j
 
 ![](https://cdn.jsdelivr.net/gh/Dclef/CDN/renpy/2022-02-11_22-03-15.png)
 
-## 6.6 我想替换图标(如PC和安卓)该如何替换？
+
+
+## 8.6 我想替换图标(如PC和安卓)该如何替换？
 
 安卓你只要准备两张png图片，大小为432*432像素。
 
@@ -316,15 +402,67 @@ PC端你只需要设置一张为icon.ico的图标，大小为128*128像素并放
 
 ##### 在线ps我推荐使用[photopea](https://www.photopea.com/)
 
-## 6.7 请在github中提交[issues](https://github.com/Dclef/renpy-tl/issues)，问题会根据issues中的问题或其他平台反馈的问题持续更新...............
+## 8.7 翻译后打开游戏却是一片空白，该如何解决？
+
+这种情况要么是你根本没有去翻译，游戏扫描到的是**空字符串**，要么就是你没有去**更换字体**，具体情况以游戏而定。
+
+## 8.8 我想游戏一打开就是中文，该如何解决？
+
+如果希望游戏一打开默认是中文，可以在 game 目录下的 screens.rpy最前面添上下面这句：
+
+```
+define config.language = "chinese"
+```
+
+这句话的意思是设置默认语言，这里的chinese是根据你**生成翻译文件的命名**而定，详情可看2.2.2部分。
+
+## 8.9 有时候用renpysdk打开工程会报错，打开游戏则不会，该如何解决？
+
+这种情况按报错而定，这里讲一种最常见的
+
+```
+ImportError: No module named unittest
+```
+
+显而易见，这是在本地没有unittest的包，全文搜索并在代码中删除有关unittest即可。
+
+## 8.10 有时候游戏没有没有screen.rpy文件，该如何解决？
+
+全文检索是否有preferences()或者vbox，我们的目的只是更换语言，这是作者自定义的问题，没有screen.rpy很正常。
+
+## 8.11 renpy翻译文件导出的rpy文本不全怎么办?
+
+这是由于renpysdk的正则没有扫描到作者所自定义的文本导致的，这种情况你必须在源码里面改，找到英文单词或句子汉化并替换，不能局限于tl目录下的翻译文件。
+
+## 8.12 我想打包成安卓，但PC端已经有2-5G以上的内存，一打包就报错，该如何解决？
+
+打不了2G以上的包是因为renpysdk本身性能的问题，所以很多作者打包安卓版都会压缩图片和视频，以保证在2G左右，所以图片视频其实有两套，而我们只找到PC端，却忽略了安卓端，所以我们只需要把安卓端拿来并解压即可(安卓端也可能会加密，所以只能解决99%的游戏)。
+
+**但拿到安卓端却有X-前缀，该如何解决？**
+
+这里本人写了个python小工具，可以用这个解决，源码以放在github上，这里给个开箱即用的。
+
+```
+https://dclef.lanzouj.com/iA4Kc0441mbi
+```
+
+注意：该工具只能重命名当前目录下的文件，不能命名目录下以及子目录下的文件，所以如果作者做了多个文件夹请多次使用。
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_19-09-49.png)
+
+##### 为什么打包会报错？
+
+大概率你没有挂魔法，因为要去下Gradle,这个请自行解决。
+
+## 8.13 请在github中提交[issues](https://github.com/Dclef/renpy-tl/issues)，问题会根据issues中的问题或其他平台反馈的问题持续更新...............
 
 
 
-# 7.参与本开源项目
+# 9.参与本开源项目
 
 如果你只想单纯的提出问题请提交[issues](https://github.com/Dclef/renpy-tl/issues)即可，如果你本身有代码基础或者无基础想参与到本项目中并修改机翻的话，请看以下步骤。
 
-## 7.1 git 的安装与使用
+## 9.1 git 的安装与使用
 
 下载[git](https://git-scm.com/downloads)，下载完成以后安装到本地(网上搜一下安装教程，这里就不多解释)。
 
@@ -337,7 +475,7 @@ $ git config --global user.name "username"
 $ git config --global user.email "email@example.com"
 ```
 
-## 7.2 vscode中git的使用
+## 9.2 vscode中git的使用
 
 安装vscode，如果不会请[点击查看](#vscode)
 
@@ -383,7 +521,7 @@ clone完成以后，修改你想要汉化文本或添加你要翻译的文本文
 
 打开并返回到vscode即可成功更新
 
-## 7.3 在你的项目主页中提交request
+## 9.3 在你的项目主页中提交request
 
 如果你完成了很多代码修改，请提交一个request，请求合并，如图所示
 
@@ -397,7 +535,13 @@ clone完成以后，修改你想要汉化文本或添加你要翻译的文本文
 
 
 
-提交完成以后就可以不用管了，感谢你本开源项目做出了一份贡献
+# 10.尾声
+
+renpy汉化教程到这里完结了(常见问题后续会在github上更新)，感谢你看到最后！
+
+如果该项目对你有帮助，可以请我喝杯咖啡。
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/Snipaste_2022-05-01_22-32-56.png)
 
 
 
