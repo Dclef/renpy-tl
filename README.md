@@ -1,4 +1,4 @@
-
+文档以迁移至https://docs.dclef.icu/
 
 # 1.创建的初衷
 
