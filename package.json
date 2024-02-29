@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "docs:dev": "vuepress dev docs",
+    "docs:dev": "SET NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
     "docs:build": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress build docs"
   },
   "name": "renpy-tl",
