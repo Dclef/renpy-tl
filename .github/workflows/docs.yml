@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v3
 
       - name: 设置yarn
-        run: yarn set version 4.0.2
+        run: yarn set version 1.22.19
 
       - name: 安装依赖
         run: yarn install
