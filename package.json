@@ -3,10 +3,10 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "name": "vuepress-renpy-tl",
+  "name": "renpy-tl",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "devDependencies": {
     "@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.6.16",
     "@vuepress/plugin-back-to-top": "^1.9.9",
