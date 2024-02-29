@@ -13,43 +13,43 @@
 
 ### 打开renpy.exe ，点击教程，生成翻译文件，如图所示
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_1.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_1.png)
 
 ### 语言下方输入**chinese** ，选择为翻译生成空字符串(默认选择)，点击生成翻译文件，如图所示
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_2.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_2.png)
 
 ### 如果成功你会得到如图所示信息。
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_3.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_3.png)
 
 ### 点击继续以后会返回到初始界面，在打开目录下方，选择打开game目录，如图所示
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_4.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_4.png)
 
 ### 选择tl(翻译)文件，如图所示
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_5.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_5.png)
 
 ### 点击chinese(教程自带多语言支持，一般游戏是没做的)，如图所示
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_6.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_6.png)
 
 ### 点击有rpy后缀文件(如果汉化他人的游戏是没有rpy后缀，只有rpyc->右键->选择打开方式->以记事本的形式打开，如图所示
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_7.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_7.png)
 
 ### 打开后会显示如图所示页面
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_8.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_8.png)
 
 ### 复制英文到 百度翻译或者谷歌翻译，这里选择的是谷歌翻译，如图所示
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_9.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_9.png)
 
 ### 再将中文复制到文件中的new 下面(注意，必须放在空字符串也就是""中间，否则renpy会报错)，初步的简单翻译就大功告成，如图所示。
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_10.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_10.png)
 
 ## 界面汉化
 
@@ -60,19 +60,19 @@
 
 ### ~~将unrpyc放进游戏game目录下面，如图所示~~【可忽略，此操作已过时】
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_11.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_11.png)
 
 ### 返回到初始界面(是指带有exe的游戏目录界面)，运行一次游戏，运行成功并显示游戏界面以后，请关闭游戏，并~~删掉un.rpyc~~文件，你会发现多出来了后缀为rpy的文件，这类文件是可以打开的，如图所示。
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_12.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_12.png)
 
 ### 在game目录中放入SourceHanSansLite.ttf字体(此字体renpy sdk自带,在launcher\game\fonts 路径中)，打开**screens.rpy**文件，在其中搜索 preferences() ，如果你使用的是记事本的格式打开，请使用ctrl+F ，如图所示
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_13.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_13.png)
 
 ### 在vbox相同格式下方添加以下代码(注意格式)，如图所示
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_14.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_14.png)
 
 ```
                 vbox:
@@ -84,7 +84,7 @@
 
 ### 在基础汉化完成以后请在tl目录下新建一个style.rpy文件，如图所示【如果你直接更换了字体，此步骤可以跳过】
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_15.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_15.png)
 
 里面的代码如下
 
@@ -95,7 +95,7 @@ translate chinese python:
 
 ### 请运行游戏，找到设置中的Language，选择Chinese。
 
-[![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_16.png)]
+![img](https://cdn.jsdelivr.net/gh/dclef/CDN/renpy/quick_start_16.png)
 
 #### 注意：教程中的多语言支持自带有简体中文，不要搞混淆了。
 
