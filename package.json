@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
+    "docs:build": "SET NODE_OPTIONS=--openssl-legacy-provider && vuepress build docs"
+  },
+  "name": "vuepress-renpy-tl",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.6.16",
+    "@vuepress/plugin-back-to-top": "^1.9.9",
+    "@vuepress/plugin-google-analytics": "^1.9.9",
+    "vuepress": "^1.9.9"
+  },
+  "dependencies": {
+    "vuepress-plugin-google-analytics-4": "^0.1.1",
+    "vuepress-theme-reco": "^1.6.17"
+  }
+}
