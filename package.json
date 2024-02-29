@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
-    "docs:build": "SET NODE_OPTIONS=--openssl-legacy-provider && vuepress build docs"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "name": "vuepress-renpy-tl",
   "version": "1.0.0",
