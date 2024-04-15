@@ -48,6 +48,7 @@ module.exports = {
           { text: '自制脚本汉化(已过时)', link: '/util/trans' },
           { text: 'Translator++工具汉化', link: '/util/Translator' },
           { text: '自制工具箱汉化(推荐)', link: '/util/renpytool' },
+          { text: 'renpy-translator(推荐)', link: '/util/renpy-translator' },
         ]
       },
       {
@@ -119,6 +120,10 @@ module.exports = {
             {
               title: '自制工具箱汉化(推荐)',
               path: '/util/renpytool'
+            }, 
+            {
+              title: 'renpy-translator(推荐)',
+              path: '/util/renpy-translator'
             },
 
           ]
