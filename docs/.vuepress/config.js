@@ -36,7 +36,10 @@ module.exports = {
           { text: '简介', link: '/guide/' },
           { text: '快速开始', link: '/guide/quick_start' },
           { text: '进阶', link: '/guide/vscode.md' },
-          { text: '8.0新特性', items:[{text:'新版本区别',link: '/guide/new_version.md' }]
+          { text: '8.0新特性', items:[
+              {text:'新版本区别',link: '/guide/new_version.md' },
+              {text: '制作安卓(壳子)',link: '/guide/android_make.md'}
+            ]
           }
         ]
       },
@@ -46,7 +49,7 @@ module.exports = {
           { text: '介绍', link: '/util/' },
           { text: 'excel汉化(已过时)', link: '/util/excel' },
           { text: '自制脚本汉化(已过时)', link: '/util/trans' },
-          { text: 'Translator++工具汉化', link: '/util/Translator' },
+          { text: 'Translator++工具汉化(新手不推荐)', link: '/util/Translator' },
           { text: '自制工具箱汉化(推荐)', link: '/util/renpytool' },
           { text: 'renpy-translator(推荐)', link: '/util/renpy-translator' },
         ]
@@ -106,15 +109,15 @@ module.exports = {
               path: '/util/'
             },
             {
-              title: 'excel汉化',
+              title: 'excel汉化(已过时)',
               path: '/util/excel'
             },
             {
-              title: '自制脚本汉化',
+              title: '自制脚本汉化(已过时)',
               path: '/util/trans'
             },
             {
-              title: 'Translator++工具汉化',
+              title: 'Translator++工具汉化(新手不推荐)',
               path: '/util/Translator'
             },
             {
