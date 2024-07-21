@@ -9,19 +9,19 @@
 
 以下你需要准备以下工具
 
-1.一个魔改版本的renpysdk (请加群获得)
+1. 一个魔改版本的renpysdk (请加群获得)
 
-2.一个反编译后的pc版renpy游戏(尽量是原版反编译)
+2. 一个反编译后的pc版renpy游戏(尽量是原版反编译)
 
 
 
-## 1.整合archive.rpa
+## 整合archive.rpa
 
 当你反编译完以后，进入game目录发现并没有archive.rpa这个东西，而是script.rpa或者是videos.rpa多个rpa文件，这时候你需要重新制作pc版本将其打包成一个archive.rpa文件。
 
 ![image-20240721203359200](https://cdn.jsdelivr.net/gh/dclef/CDN/img/android_make-01.png)
 
-### 1.1 修改options.rpy
+### 修改options.rpy
 
 找到options.rpy这个文件，如果没有的话请用工具(如vs code)全局搜索这个代码
 
@@ -46,7 +46,7 @@ build.archive
 
 完成以后关闭并将之前的rpa全部删除(建议做备份)
 
-### 1.2 制作archive.rpa
+###  制作archive.rpa
 
 打开魔改版renpy-sdk，选择构建发行版,只勾选windows，然后选择构建,等待构建完毕。
 
@@ -54,7 +54,7 @@ build.archive
 
 ![image-20240721205728400](https://cdn.jsdelivr.net/gh/dclef/CDN/img/android_make-04.png)
 
-## 2.制作安卓壳子
+## 制作安卓壳子
 
 打开原版游戏目录，将其中的audio  images video 目录以及exe等文件删除(每个游戏情况会不一样) 如图所示
 
@@ -68,7 +68,7 @@ build.archive
 
 ![image-20240721210207087](https://cdn.jsdelivr.net/gh/dclef/CDN/img/android_make-07.png)
 
-## 3. 安装游戏
+## 安装游戏
 
 将游戏安装后，必须要先运行一次，你会发现能运行，只是说没有图片。![image-20240721210442537](https://cdn.jsdelivr.net/gh/dclef/CDN/img/android_make-08.png)
 

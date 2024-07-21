@@ -97,6 +97,19 @@ module.exports = {
               title: '进阶',
               path: '/guide/vscode'
             },
+          ],
+        },
+        {
+          title: '8.0新特性',
+          children: [
+            {
+              title: '介绍',
+              path: '/guide/new_version'
+            },
+              {
+              title: '制作安卓壳子',
+              path: '/guide/android_make'
+              },
           ]
         }
       ],
