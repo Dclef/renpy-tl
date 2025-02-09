@@ -244,6 +244,59 @@ define config.language = "chinese"
 
 ![renpy-translator-01-23](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpy-translator-01-23.png)
 
+## 12.接入Deepseek api（以硅基流动为例）
+
+::: warning 注意
+
+由于deepseek api控制面板打不开的原因，这里使用硅基流动代替
+
+硅基流动注册地址：https://cloud.siliconflow.cn/i/Cvmvkm5d
+
+:::
+
+
+
+打开工具找到翻译引擎->引擎设置->激活的翻译引擎
+
+选择OpenAI(Token Required) 
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpy-translator-01-24.png)
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpy-translator-01-25.png)
+
+api Key在注册完硅基流动后 打开控制台找到API 密钥 复制它 然后填入到上文的API KEY中
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpy-translator-01-26.png)
+
+找到定制模型，输入如图
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpy-translator-01-27.png)
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpy-translator-01-28.png)
+
+一定别忘了，否则你选择不了模型
+
+```
+deepseek-ai/DeepSeek-R1
+deepseek-ai/DeepSeek-V3
+```
+
+然后将以下链接填入到上图的base_url中，填完以后点击确认即可。
+
+```
+https://api.siliconflow.cn/v1/
+```
+
+接下来就可以做测试了，这里依然用老游戏测试
+
+可以看到成功翻译，说明API调用成功
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpy-translator-01-29.png)
+
+![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpy-translator-01-30.png)
+
+
+
 ## 结语
 
 此工具的教程就此完结，当然其中有很多不足也欢迎指正，可以fork这个文档进行更正。
