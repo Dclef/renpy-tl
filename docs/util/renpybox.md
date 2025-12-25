@@ -6,7 +6,7 @@
 
 **下载地址**：https://github.com/Dclef/renpybox/
 
-::: info 说明
+::: tip 说明
 
 此项目集成了几个项目的结合体,本人也无力去做UI，所以凑合看吧
 
