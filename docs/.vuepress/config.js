@@ -49,9 +49,10 @@ module.exports = {
           { text: '介绍', link: '/util/' },
           { text: 'excel汉化(已过时)', link: '/util/excel' },
           { text: '自制脚本汉化(已过时)', link: '/util/trans' },
-          { text: 'Translator++工具汉化(新手不推荐)', link: '/util/Translator' },
-          { text: '自制工具箱汉化', link: '/util/renpytool' },
-          { text: 'renpy-translator(推荐)', link: '/util/renpy-translator' },
+          { text: 'Translator++工具汉化(已过时)', link: '/util/Translator' },
+          { text: '自制工具箱汉化(已过时)', link: '/util/renpytool' },
+          { text: 'renpy-translator(已过时)', link: '/util/renpy-translator' },
+          { text: 'RenpyBox(推荐)', link: '/util/renpybox' },
         ]
       },
       {
@@ -131,16 +132,20 @@ module.exports = {
               path: '/util/trans'
             },
             {
-              title: 'Translator++工具汉化(新手不推荐)',
+              title: 'Translator++工具汉化(已过时)',
               path: '/util/Translator'
             },
             {
-              title: '自制工具箱汉化',
+              title: '自制工具箱汉化(已过时)',
               path: '/util/renpytool'
             }, 
             {
-              title: 'renpy-translator(推荐)',
+              title: 'renpy-translator(已过时)',
               path: '/util/renpy-translator'
+            },
+            {
+              title: 'RenpyBox(推荐)',
+              path: '/util/renpybox'
             },
 
           ]
