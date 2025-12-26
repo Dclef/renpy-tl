@@ -30,9 +30,9 @@
 </p>
 
 <p align="center">
-  <a href="https://docs.dclef.icu">文档</a>
+  <a href="https://docs.dclef.com">文档</a>
   ·
-  <a href="https://docs.dclef.icu/guide/quick_start.html">开始使用</a>
+  <a href="https://docs.dclef.com/guide/quick_start.html">开始使用</a>
 
 </p>
 
