@@ -1,117 +1,156 @@
 # 使用RenpyBox进行翻译
 
-现在已经是属于AI新时代了，**末法时代**结束了。如今人人都可以使用AI进行汉化,只是时间快慢而已，所以此工具是集成了Renpy的相关模块制作的集成工具，包含
+现在已经是属于AI新时代了，**末法时代**结束了。如今人人都可以使用AI进行汉化，只是时间快慢而已。RenpyBox 是集成了 Ren'Py 相关模块制作的集成工具，包含
 
-**解包、反编译、提取翻译、补新翻译、本地词库、禁翻库、使用LLM AI进行翻译、自动填充字体、自动增加中文选项、封包**等功能，因为本人只针对Renpy游戏引擎，所以其他游戏引擎一律不进行优化，请知晓。
+**解包、反编译、提取翻译、补新翻译、本地词库、禁翻库、使用LLM AI进行翻译、自动填充字体、自动增加中文选项、封包**等功能，因为本人只针对 Renpy 游戏引擎，所以其他游戏引擎一律不进行优化，请知晓。
 
-**下载地址**：https://github.com/Dclef/renpybox/
+**下载地址**：https://github.com/Dclef/renpybox/releases
 
 ::: tip 说明
 
-此项目集成了几个项目的结合体,本人也无力去做UI，所以凑合看吧
+v0.9.0 起提供全新 Windows 桌面界面（推荐），旧 Python / Qt5 版与源码继续保留。本教程基于**桌面版 v0.9.1** 编写。
 
 :::
+
+## 下载与安装
+
+到 [GitHub Releases](https://github.com/dclef/renpybox/releases) 下载对应文件：
+
+| 文件 | 用途 |
+| --- | --- |
+| `RenpyBox-NewUI-x.x-x64.exe` | Windows 安装程序，**推荐使用** |
+| `RenpyBox-NewUI-x.x-x64.zip` | 免安装包，完整解压后运行其中的程序 |
+| `RenpyBox_vx.x.zip` | 保留旧界面的 Python 兼容包，供老版本用户更新 |
+
+桌面版已附带运行环境，**不需要额外安装 Python**。应用配置保存在 `%APPDATA%\RenpyBox-newUI`，与 Python 版相互独立、不会互相覆盖。
+
+打开后是这样的界面（有惊喜）：
+
+![翻译任务](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/desktop-translation-zh.png)
+
+左侧是主导航：**翻译任务、Agent 助手、项目设置、接口管理、Ren'Py 工具箱、角色/世界观工作台**，下方是基础设置、专家设置、翻译提示。
 
 ## 基本配置
 
-接下来就是开始翻译，首先我们打开翻译器，为了保持一致我会下载官网的版本，下载是这个样子，然后我们打开（有惊喜）
+### 第一步：配置翻译接口
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225221316.png)
+点开「接口管理」，它跟 [LinguaGacha](https://github.com/neavo/LinguaGacha) 是一样的思路（我做的是 Renpy 的功能）。在这里添加并测试翻译接口：
 
-接着点开接口管理，它跟[LinguaGacha](https://github.com/neavo/LinguaGacha) 是一样的UI（抄的它的，我做的是Renpy的功能）![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225221442.png)
+![接口管理](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-02-接口管理.png)
 
-然后我们选中某一个API，请自行设置，这里我用的是deepseek
+- 点右上角「+ 新增接口」添加接口，免费 **Google / Bing 翻译无需申请 Key**（需要能访问对应服务的网络）；付费接口按平台要求填写 Key
+- 选中的接口即为「主翻译接口」，翻译任务会使用它
+- 建议使用 [硅基流动](https://cloud.siliconflow.cn/i/Cvmvkm5d) 或 deepseek 等大模型接口
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225221722.png)
+如果你是老用户，还可以在「新增接口 → 从旧版导入」选择 Python 版程序目录下的 `config.json`，直接搬回原有的接口与启用项，密钥会自动沿用，不用重新填写。
 
-然后返回到项目设置理，找到这里的原文和译文，请看游戏的语言做判断，这里的输入和输出文件夹最好是先去设置，虽然本项目做了自动化的设置但为了防止万一还是先去设置一下。
+### 第二步：项目设置
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225222301.png)
+返回「项目设置」，绑定 Ren'Py 工程（选择包含 `game/` 的项目根目录），然后设置原文语言和译文语言：
 
-然后点开基础设置，这来到并发和行数可以自行设置，当然你用默认也无所谓，我这里设置成默认的，做完以后就可以进行一键翻译了。
+![项目设置](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-01-项目设置.png)
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225222451.png)
+- **原文语言 / 译文语言**：请按游戏的语言做判断
+- **输入文件夹**：翻译读取目录，一般是 `game/tl/<语言>`
+- **输出文件夹**：译文写出目录
+- 「使用整体输出中文」开启后，译文语言为中文时会使用繁体字形输出
+
+输入和输出文件夹最好先去手动设置一下，虽然本项目做了自动化设置，但为了防止万一还是先确认一遍。
+
+### 第三步：基础设置
+
+「基础设置」里的并发任务阈值和每分钟任务数（RPM）可以自行调整，用默认也无所谓。如果外部接口超时 / 限速，就在这里调小并发，而不是在「接口管理」里改。
+
+![基础设置](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-03-基础设置.png)
+
+做完以后就可以进行一键翻译了。
 
 ## 一键翻译
 
-打开百宝箱，找到一键翻译，如图
+打开「Ren'Py 工具箱」，找到**一键翻译**（推荐流程第 1 步）：
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225223530.png)
+![Ren'Py 工具箱](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-13-RenPy工具箱.png)
 
-为了防止意外，我这里也设置了原文和译文的设置
+### 准备项目
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225223640.png)
+输入**游戏根目录**（注意是包含 `game/` 的目录），选择原文 / 译文语言，确认抽取模式后点击「开始准备」：
 
-输入游戏目录，注意是游戏跟目录，这里还是拿老演员来进行翻译
+![一键翻译-准备](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-04-一键翻译-准备.png)
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225224330.png)
+- **抽取模式**：自动（有旧译文时增量，否则全量）/ 增量抽取（保留已有译文，推荐）/ 全量抽取（备份后重新生成，慎用）
+- 「先执行官方抽取」会自动寻找游戏exe执行官方翻译抽取；检测到 RPA 会自动解包并补齐反编译
+- 准备完成不会自动调用收费翻译接口，可以放心点
 
-显示提取完成，如图所示，这里可以去看另外一个控制台，那里也有详细的说明
+显示提取完成后，可以到「翻译任务」页查看详细进度。
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225224430.png)
+### 术语表和禁翻表
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225224521.png)
+点「下一步」进入术语表。这里先点击「扫描角色名」自动提取角色名：
 
-点击开始翻译，这里就会有术语表和禁翻表，这里先点击自动提取角色名
-
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225224559.png)
-
-当然你也可以在本地词库里面重新扫描角色名，如图所示
-
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225224718.png)
+![术语表](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-05-术语表.png)
 
 ::: warning 注意
 
-请看到这里会有很多选项，如果你要添加术语库，最好的方式就是自己手动去翻译，因为LLM或者其他都可以翻译不到位，其次这里的自动分类是根据NER的模型去识别分类，有一定概率是识别不到的。然后配置好一定要点击保存到配置！一定要保存配置！
+这里会有很多选项。如果要添加术语库，最好的方式就是自己手动去翻译，因为 LLM 或其他方式都可能翻译不到位；「自动分类」是根据 NER 模型识别分类的，有一定概率识别不到。配置好一定要点「保存到项目」！一定要保存！
 
 :::
 
+术语表后面是禁翻表（`下一步：禁翻表`），管理不需要翻译的变量和代码。
 
+### 开始翻译
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225225205.png)
+配置好词表后回到「翻译任务」页，确认当前接口和输入 / 输出目录，点击「开始翻译」：
 
-翻译好以后如图所示，接下来需要返回到一键翻译的界面去，点击下一步，开始翻译
+![翻译任务](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-07-翻译任务.png)
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225225310.png)
+接下来就是等待翻译完成。任务页会实时显示进度、吞吐和近期翻译流水；中途可以「停止」，之后用「继续任务」断点续译，失败的条目可以「重翻失败项」。
 
-接下来就是等待翻译完成
+### 校对与修正
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225225417.png)
+翻译完成后，使用「检查与润色」（或任务页右上角「打开平行校对台」）查看质量报告、校对或润色译文：
 
-你会发现有一些报错，但无关紧要
+![检查与润色](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-08-检查与润色.png)
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225232444.png)
+也可以点开工具箱的「批量修正」，生成相应的 Excel 批量修改后注入修正。校对保存到翻译缓存，确认后用「写入译文文件」写回——**校对本身不会自动改写游戏文件**。
 
-点开百宝箱，找到批量修正
+### 应用到游戏
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225232604.png)
+接下来使用工具箱处理收尾问题：
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225232642.png)
+![应用翻译到游戏](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-09-应用翻译到游戏.png)
 
-生成相应的EXCEL，如图，这里为了快速演示，就随意修改
+- **应用翻译到游戏**：将翻译结果写入游戏的 TL 目录
+- **设置默认语言**：设置游戏启动时的默认语言，一键完成 ![设置默认语言](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-12-设置默认语言.png)
+- **添加语言入口**：向游戏添加语言切换功能 ![添加语言入口](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-11-添加语言入口.png)
+- **字体注入**：注入预置字体包（一键翻译过程中已经自动实现，这里只是额外的功能）![字体注入](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-10-字体注入.png)
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225232752.png)
+完成后再打开游戏就可以了。至此一键翻译流程完成。
 
-然后点击注入，即可修正完成
+## 其他常用工具
 
-接下来就是第五步，使用工具去处理问题
+工具箱共 27 项，除上面流程用到的之外，常用的还有：
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225232940.png)
+- **翻译方式**：RPY 抽取设置、翻译抽取到 TL、直接翻译 RPY、HOOK 翻译、源码翻译、补全翻译、文本提取 JSON
+- **资源与词表**：称呼桥接、终极结构导出、批量修正、姓名提取
+- **工程与修复**：解包/打包（RPA 解包、RPYC 反编译）、错误修复、更新翻译复用、代码格式化、安卓打包、网页 / AI 翻译向导、游戏模组注入
 
-设置默认语言，一键完成
+带「需先选择游戏目录」提示的工具依赖当前项目，先在「项目设置」或「一键翻译」里选好目录即可。
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225233027.png)
+## 其他功能
 
-语言切换，一键完成
+- **Agent 助手**：内置 AI Agent，可检查当前项目、扫描脚本问题、查询翻译状态，并在确认后执行 RPA 解包和一键翻译 ![Agent助手](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-15-Agent助手.png)
+- **角色 / 世界观工作台**：维护角色卡与世界观，可预览 / 编辑翻译提示词 ![角色世界观工作台](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-14-角色世界观工作台.png)
+- **应用设置**：检查更新（含大小与 SHA-256 校验）、查看运行日志 ![应用设置](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/2025103101-16-应用设置.png)
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225233056.png)
+## 从旧版迁移
 
-字体注入，一键完成（可以忽略，因为一键翻译过程中已经实现这里只是额外的功能）
+- Python 版与桌面版的配置目录相互独立，升级桌面版**不会影响旧版配置**
+- 需要沿用旧接口时，在桌面版「接口管理」点击「新增接口 → 从旧版导入」，选择 Python 版程序目录下的 `config.json` 即可
+- 旧译文可以通过工具箱「更新翻译复用」按原文填入新版本的空条目
 
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225233411.png)
+## 常见问题
 
-再将out的文件夹迁移到正式的文件夹以后，迁移以后删除out就可以打开游戏了！
-
-![](https://cdn.jsdelivr.net/gh/dclef/CDN/img/renpybox/20251225233902.png)
-
-至此一键翻译流程完成。
+- 翻译缓存位于**当前输出目录**下的 `cache` 子目录，暂停后可直接「继续任务」，或导出已完成部分
+- 桌面版日志在「应用设置 → 运行日志」导出；Python 版日志在程序目录下的 `log`
+- 遇到漏翻或报错打不开，先用「错误修复」扫描修复，再用「补全翻译」补漏
+- 反馈问题请到 [GitHub Issues](https://github.com/Dclef/renpybox/issues)，或加 QQ 群：821152470
